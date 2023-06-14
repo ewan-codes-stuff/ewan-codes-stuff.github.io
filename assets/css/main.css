@@ -87,7 +87,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #303238 url("images/bg01.png");
+		background: #0040ff url("images/bg01.png");
 	}
 
 		body.is-preload * {
@@ -103,7 +103,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		font-family: 'Open Sans', sans-serif;
-		color: #7b818c;
+		color: #03399e;
 		font-weight: 400;
 		font-size: 11pt;
 		line-height: 1.85em;
@@ -122,12 +122,12 @@ input, select, textarea {
 		text-transform: uppercase;
 		font-weight: 800;
 		letter-spacing: 0.04em;
-		color: #404248;
+		color: #003df3;
 		margin: 0 0 1em 0;
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: inherit;
+		color: #00d7f3;
 		text-decoration: none;
 		outline: 0;
 	}
@@ -155,7 +155,7 @@ input, select, textarea {
 	}
 
 	b, strong {
-		color: #404248;
+		color: #f40000;
 		font-weight: 700;
 	}
 
@@ -181,11 +181,11 @@ input, select, textarea {
 
 	hr {
 		border: 0;
-		border-top: solid 1px #ddd;
+		border-top: solid 1px #d30000;
 	}
 
 	blockquote {
-		border-left: solid 0.5em #ddd;
+		border-left: solid 0.5em #deae00;
 		padding: 1em 0 1em 2em;
 		font-style: italic;
 	}
@@ -1256,14 +1256,14 @@ input, select, textarea {
 	}
 
 	header.major {
-		border-bottom: solid 1px #dbdbdb;
+		border-bottom: solid 1px #99ff00;
 		margin: 0 0 3em 0;
 	}
 
 		header.major:after {
 			content: '';
 			display: block;
-			border-top: solid 1px #dbdbdb;
+			border-top: solid 1px #00b7ff;
 			height: 8px;
 		}
 
@@ -1298,7 +1298,7 @@ input, select, textarea {
 		display: block;
 		width: 100%;
 		border-radius: 8px;
-		border: solid 1px #eee;
+		border: solid 1px #e1bb00;
 	}
 
 	form input[type="text"]:focus,
@@ -1348,7 +1348,7 @@ input, select, textarea {
 		}
 
 			table.default tr {
-				border-top: solid 1px #eee;
+				border-top: solid 1px #c60000;
 			}
 
 				table.default tr:first-child {
@@ -1446,7 +1446,6 @@ input, select, textarea {
 		background-color: #4091bf;
 		border-radius: 8px;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.35), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.35);
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		color: #fff !important;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -1658,7 +1657,7 @@ input, select, textarea {
 	}
 
 	.box.article-list article {
-		border-bottom: solid 1px #dbdbdb;
+		border-bottom: solid 1px #43b000;
 		margin: 0 0 2.75em 0;
 		padding: 0 0 2.75em 0;
 	}
@@ -1753,7 +1752,6 @@ input, select, textarea {
 		background-color: rgba(59, 62, 69, 0.9);
 		border-radius: 8px;
 		box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 0px 2px rgba(255, 255, 255, 0.075), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.2), 0px 2px 14px 0px rgba(0, 0, 0, 0.4);
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		padding: 1.5em;
 		line-height: 2.5em;
 		min-width: 15em;
@@ -1882,7 +1880,6 @@ input, select, textarea {
 
 		.wrapper.style1 {
 			position: relative;
-			text-shadow: 1px 1px 0 #fff;
 			background-color: #fff;
 			background-image: url("images/bg03.png"), url("images/bg04.png"), url("images/bg02.png");
 			background-repeat: no-repeat, no-repeat, repeat;
@@ -1892,7 +1889,6 @@ input, select, textarea {
 
 		.wrapper.style3 {
 			position: relative;
-			text-shadow: 1px 1px 0 #fff;
 			background-color: #fff;
 			background-image: url("images/bg03.png"), url("images/bg02.png");
 			background-repeat: no-repeat, repeat;
@@ -1921,7 +1917,6 @@ input, select, textarea {
 			background-color: rgba(59, 62, 69, 0.9);
 			border-radius: 8px;
 			box-shadow: inset 0px 0px 0px 1px rgba(0, 0, 0, 0.45), inset 0px 2px 1px 0px rgba(255, 255, 255, 0.15);
-			text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		}
 
 		#header h1 {
@@ -1930,14 +1925,13 @@ input, select, textarea {
 			top: 50%;
 			margin-top: -0.65em;
 			font-size: 1.5em;
-			color: #fff;
+			color: #ff0000;
 		}
 
 /* Footer */
 
 	#footer {
 		margin-bottom: 0;
-		text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 		position: relative;
 		z-index: 2;
 	}
@@ -2102,7 +2096,6 @@ input, select, textarea {
 				height: 44px;
 				left: 0;
 				position: fixed;
-				text-shadow: -1px -1px 0 black;
 				top: 0;
 				width: 100%;
 				z-index: 10001;
@@ -2113,7 +2106,7 @@ input, select, textarea {
 					text-transform: uppercase;
 					font-weight: 800;
 					letter-spacing: 0.04em;
-					color: #fff;
+					color: #c7b300;
 					line-height: 44px;
 					text-align: center;
 				}
