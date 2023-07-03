@@ -155,6 +155,7 @@ input, select, textarea {
 	}
 
 	b, strong {
+		text-transform: uppercase;
 		color: #b7b7b7;
 		font-weight: 700;
 	}
@@ -1831,9 +1832,9 @@ input, select, textarea {
 			font-weight: 700;
 			line-height: 1.3em;
 			letter-spacing: 0.04em;
-			float: left;
-			text-align: right;
-			width: 60%;
+			/* float: left; */
+			text-align: center;
+			/* width: 60%; */
 			line-height: 1.5em;
 			margin: 0;
 		}
