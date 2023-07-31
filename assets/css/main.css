@@ -103,7 +103,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		font-family: 'Open Sans', sans-serif;
-		color: #48d72c;
+		color: #2eac15;
 		font-weight: 400;
 		font-size: 11pt;
 		line-height: 1.85em;
@@ -127,7 +127,7 @@ input, select, textarea {
 	}
 
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: #8cff00;
+		color: #7adf00;
 		text-decoration: none;
 		outline: 0;
 	}
@@ -1372,7 +1372,7 @@ input, select, textarea {
 
 			table.default thead {
 				background: #404842;
-				color: #fff;
+				color: #fce3fc;
 			}
 
 /* Image */
