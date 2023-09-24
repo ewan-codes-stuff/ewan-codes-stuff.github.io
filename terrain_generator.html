@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>No Sidebar - ZeroFour by HTML5 UP</title>
+		<title>Terrain Generator</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -51,7 +51,7 @@
 											<li>
 												<a href="#">Solo Projects</a>
 												<ul>
-													<li><a href="dda_proj.html">Dynamic Difficulty Adjustment</a></li>
+													<li><a href="dda_proj.html">DDA</a></li>
 													<li><a href="terrain_generator.html">Terrain Generator</a></li>
 													<li><a href="unreal_mechanics.html">Unreal Mechanics</a></li>
 													<li><a href="ut_level.html">UT Deathmatch Level</a></li>
@@ -78,47 +78,46 @@
 
 										<article>
 											<header class="major">
-												<h2>No Sidebar</h2>
-												<p>Sidebars are not welcome here</p>
+												<h2>Terrain Generator</h2>
+												<p>Second Year Programming Project</p>
 											</header>
 
-											<span class="image featured"><img src="images/pic08.jpg" alt="" /></span>
+											<span class="image featured"><img src="images/terrain_generator.png" alt="" /></span>
 
-											<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-											Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-											Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-											consequat etiam lorem ipsum dolor sit amet nullam. Phasellus quam turpis,
-											feugiat sit amet ornare in, hendrerit in lectus. Praesent semper mod quis
-											eget mi. Etiam eu ante risus. Aliquam erat volutpat. Aliquam luctus et
-											mattis lectus sit amet pulvinar. Nam turpis nisi consequat etiam.</p>
+											<p>In our second year we were tasked with studying differing types of procedural generation for games. 
+												This included L-Systems and Perlin Noise, and how they could be leveraged to create dungeons, mazes and terrain.</p>
 
 											<h3>More intriguing information</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-											justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-											rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-											Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-											Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus lorem ipsum
-											dolor sit amet phasellus consequat.</p>
+											<p>For my assignment I decided to create a terrain generator using Perlin Noise.
+												I created a psuedo-random map of black and white points. 
+												Using the black points(zeroes) as the troughs and the white points(ones) as the peaks, 
+												then the spaces in between each point are smoothed to give various shades of gray to
+												create slopes.
 
-											<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-											quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-											ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-											vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-											fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-											Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-											Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus sed feugiat lorem ipsum
-											dolor nullam blandit tempus.</p>
+												<br>In this project I use these gradients as a way of simulating waves of water/other liquids. 
+												To gain more control over the generator I added variable parameters in order to get different types of waves.
+												One of these is the scale which inversely changes the sizes of each pixels in the Noise Map, 
+												so the larger the scale	is the smaller each individual pixel is. So the larger the "scale" of the noise map.<br>
+
+												<br>Octaves are extra layers of perlin noise on top of each others in order to help create natural looking surfaces. 
+												A second or third pass of the noise function in this case.
+												I also have an option here to turn off the normalization of the Octaves, which keeps the value of the output of 
+												the noise map between 1 and 0 based on the maximum and minimum of the noisemap. You can turn this off to pass 
+												the raw values of the octaves which gives higher highs & lower lows in case you wanted to simulate a tsunami or some 
+												legendarily rough seas.<br>
+
+												<br>Persistance calculates how much each individual octave contributes to the noise map. So with a Persistance of 1 
+												all octaves are contributing equally but increase or decrease affects the following octaves. 
+												Persistance can be visualized as the rate at which the amplitude of the octaves increase.<br>
+
+												<br>And if Persistance is amplitude, Lacunarity is frequency. Increasing frequency gives the effect of raising the level of fine detail
+												 (as the perlin noise "oscillates" faster). <br>
+											</p>
+
+											<p>I also created a mesh plane which the vertices height followed the noisemap creating a 
+												continous wave of fluid. Additionally for collisions I replaced the vertices with unity game objects
+												so that I could place a ball to simulate it passing over the waves.
+											</p>
 										</article>
 
 								</div>
@@ -161,7 +160,7 @@
 														<div>
 															<header>
 																<span class="date"></span>
-																<h3><a href="#">Unreal Mechanics</a></h3>
+																<h3><a href="unreal_mechanics.html">Unreal Mechanics</a></h3>
 															</header>
 															<p> In my second year of university, in order to get us up to speed with the Unreal Engine,
 																we were given the assignment to create 5 distinct game mechanics.
@@ -176,7 +175,7 @@
 														<div>
 															<header>
 																<span class="date"></span>
-																<h3><a href="#">UT Deathmatch Level</a></h3>
+																<h3><a href="ut_level.html">UT Deathmatch Level</a></h3>
 															</header>
 															<p>Also in my second year, we were given the opportunity to take a Level Design module.
 																In this module, I made a Team Deathmatch map for Unreal Tournament, 
